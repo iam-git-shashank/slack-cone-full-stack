@@ -1,4 +1,8 @@
 import { Controller } from "@nestjs/common";
 
-@Controller()
-export class InviteController{}
+@Controller('invite')
+export class InviteController{
+
+
+
+}

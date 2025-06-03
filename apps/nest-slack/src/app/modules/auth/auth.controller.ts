@@ -32,7 +32,7 @@ export class AuthenticationController {
 
   @HttpCode(HttpStatus.OK)
   @Post('login')
-  async logIn(@Body() user: CreateUserDto, @Res() response: Response) {
+  async logIn(@Body() user: {email:string;password:string}, @Res() response: Response) {
     console.log(user)
     const auth_user = await this.authenticationService.getAuthenticatedUser(
       user
